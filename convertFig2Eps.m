@@ -45,8 +45,8 @@ function convertFig2Eps(figPathOrFileNms,varargin)
 %     example 1: "convertFig2Eps"  /or/  "convertFig2Eps()" /or/ "convertFig2Eps('.')"
 %     example 2: "convertFig2Eps('C:','subdir','png','expand','normalize','fontsize100','save','eval:disp(fig.Number);')" 
 %
-% Author: Yasen Polihronov (yp1504@bristol.ac.uk) 
-% Version: 1.6, 24/03/2020 
+% Author: JessyJP 
+% Version: 1.6, 24/04/2022 
 % Changelog: 
 % 1.0 - First publication 
 % 1.1 - Bugfix & error handling option "errorContinue" added 
