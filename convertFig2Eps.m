@@ -55,6 +55,7 @@ function convertFig2Eps(figPathOrFileNms,varargin)
 % 1.4 - Add Comments for more internal variables
 % 1.5 - Fix misspelling of "outputExt"
 % 1.6 - Add object print/output handle "objOutH" which could be [fig] or [ax]
+% 1.7 - add "function expandAxesToFillFigure(fig)" as a subfunction
 
 % Reset
 % clear all;
@@ -251,4 +252,13 @@ for i = 1:numel(Dtb)
     end
 end
 
+end
+
+function expandAxesToFillFigure(fig)
+% function expandAxesToFillFigure(fig)
+
+    style = hgexport('factorystyle');
+    style.Bounds = 'tight';
+    hgexport(fig,'-clipboard',style,'applystyle', true);
+    drawnow;
 end
