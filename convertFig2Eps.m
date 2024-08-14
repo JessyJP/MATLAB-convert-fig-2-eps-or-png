@@ -181,11 +181,6 @@ for i = 1:numel(Dtb)
            end
        end
        %% Inset other adjustments here
-       % Normalize Figure Window
-       if normalizeON
-%            set(fig,'units','normalized','position',[0 0 1 1]);
-           set(fig,'WindowStyle','normal','WindowState','fullscreen');
-       end
 %        try
 %            for c = 1:length(fig.Children)
 %                Child = fig.Children(c);
@@ -199,6 +194,12 @@ for i = 1:numel(Dtb)
            expandAxesToFillFigure(fig);
        end      
        
+      % Normalize Figure Window
+       if normalizeON
+%            set(fig,'units','normalized','position',[0 0 1 1]);
+           set(fig,'WindowStyle','normal','WindowState','fullscreen');
+       end
+
        % Default output handle for export
        objOutH = fig;% This could be changed to a specific subplot
        
